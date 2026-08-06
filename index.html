@@ -1,3 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت شخصی من</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👋 سلام!</h1>
+        <p>به سایت شخصی من خوش آمدی</p>
+        <p id="message">اینجا می‌تونی درباره خودت بنویسی</p>
+        <button class="btn" onclick="greet()">کلیک کن!</button>
+    </div>
+    
+    <script>
+        function greet() {
+            document.getElementById('message').textContent = 'خیلی خوب است! 🎉';
+        }
+    </script>
+</body>
+</html>
 import React, { useState } from 'react';
 import { ChevronLeft, Send, Plane, Film, MessageCircle } from 'lucide-react';
 
@@ -5,10 +81,10 @@ export default function TelegramMiniApp() {
   const [currentPage, setCurrentPage] = useState('welcome');
 
   const films = [
-    { id: 1, name: 'The Wheel of Time', year: '2021' },
-    { id: 2, name: 'ریچر', year: '2022-2025' },
-    { id: 3, name: 'مفقود', year: '2026' },
-    { id: 4, name: 'سه هزار سال حسرت', year: '202۲' },
+    { id: 1, name: 'شاهرخ خان - پادپای', year: '2023' },
+    { id: 2, name: 'فیلم سینمایی آخر', year: '2022' },
+    { id: 3, name: 'قصه عشق و جنگ', year: '2023' },
+    { id: 4, name: 'سفر به ابرها', year: '2021' },
   ];
 
   const countries = [
@@ -20,8 +96,8 @@ export default function TelegramMiniApp() {
   ];
 
   const contacts = [
-    { type: 'ایمیل', value: 'ahmuhebzada@gmail.com', icon: '✉️' },
-    { type: 'تلفن', value: '+93 787091019', icon: '📱' },
+    { type: 'ایمیل', value: 'info@example.com', icon: '✉️' },
+    { type: 'تلفن', value: '+93 700 123 456', icon: '📱' },
     { type: 'آدرس', value: 'کابل، افغانستان', icon: '📍' },
   ];
 
